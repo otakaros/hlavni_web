@@ -32,12 +32,15 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: npm run build:static
         env:
           VITE_INQUIRY_ENDPOINT: ${{ secrets.VITE_INQUIRY_ENDPOINT }}
 
-      - name: Copy CNAME
-        run: cp CNAME dist/CNAME
+      - name: Prepare dist for deployment
+        run: |
+          rm -rf dist/server dist/client
+          mv dist/public-static/* dist/
+          rmdir dist/public-static 2>/dev/null || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
