@@ -8,7 +8,7 @@ const distDir = path.resolve(projectRoot, 'dist');
 const publicStaticDir = path.resolve(distDir, 'public-static');
 
 // Routes to prerender
-const routes = ['/', '/geodetika'];
+const routes = ['/', '/geodezie'];
 
 async function prerender() {
   console.log('🚀 Starting prerendering...');

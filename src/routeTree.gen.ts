@@ -9,12 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as GeodetikaRouteImport } from './routes/geodetika'
+import { Route as GeodezieRouteImport } from './routes/geodezie'
 import { Route as IndexRouteImport } from './routes/index'
 
-const GeodetikaRoute = GeodetikaRouteImport.update({
-  id: '/geodetika',
-  path: '/geodetika',
+const GeodezieRoute = GeodezieRouteImport.update({
+  id: '/geodezie',
+  path: '/geodezie',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +25,37 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/geodetika': typeof GeodetikaRoute
+  '/geodezie': typeof GeodezieRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/geodetika': typeof GeodetikaRoute
+  '/geodezie': typeof GeodezieRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/geodetika': typeof GeodetikaRoute
+  '/geodezie': typeof GeodezieRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/geodetika'
+  fullPaths: '/' | '/geodezie'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/geodetika'
-  id: '__root__' | '/' | '/geodetika'
+  to: '/' | '/geodezie'
+  id: '__root__' | '/' | '/geodezie'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  GeodetikaRoute: typeof GeodetikaRoute
+  GeodezieRoute: typeof GeodezieRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/geodetika': {
-      id: '/geodetika'
-      path: '/geodetika'
-      fullPath: '/geodetika'
-      preLoaderRoute: typeof GeodetikaRouteImport
+    '/geodezie': {
+      id: '/geodezie'
+      path: '/geodezie'
+      fullPath: '/geodezie'
+      preLoaderRoute: typeof GeodezieRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,7 +70,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  GeodetikaRoute: GeodetikaRoute,
+  GeodezieRoute: GeodezieRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -24,7 +24,7 @@ export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const isGeo = location.pathname.startsWith("/geodetika");
+  const isGeo = location.pathname.startsWith("/geodezie");
   const links = isGeo ? geoLinks : dronLinks;
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export function Nav() {
         Dronové služby
       </Link>
       <Link
-        to="/geodetika"
+        to="/geodezie"
         className={`nav-page-btn ${isGeo ? "active" : ""}`}
         onClick={closeMenu}
       >

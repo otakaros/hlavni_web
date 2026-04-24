@@ -37,7 +37,7 @@ jako HTML soubory, které se pak nasazují na GitHub Pages bez potřeby Node.js 
 1. **`npm run build`** – Vite builduje client a server-side runtime
 2. **`npm run build:static`** – Spustí build + `scripts/prerender.mjs`
    - Prerender skript importuje server runtime
-   - Pro každou routu (`/`, `/geodetika`) zavolá `server.fetch()`
+   - Pro každou routu (`/`, `/geodezie`) zavolá `server.fetch()`
    - Vygeneruje HTML soubory do `dist/public-static/`
    - Zkopíruje assets a speciální soubory (CNAME, .nojekyll)
 
@@ -46,9 +46,9 @@ jako HTML soubory, které se pak nasazují na GitHub Pages bez potřeby Node.js 
 ```
 dist/public-static/
 ├── index.html              # Domovská stránka /
-├── geodetika.html          # /geodetika.html
-├── geodetika/
-│   └── index.html          # /geodetika/ (nice URL)
+├── geodezie.html          # /geodezie.html
+├── geodezie/
+│   └── index.html          # /geodezie/ (nice URL)
 ├── assets/                 # CSS, JS, obrázky
 ├── .nojekyll              # Říká GitHub Pages: nepoužívej Jekyll
 ├── CNAME                  # Vlastní doména (geodrona.cz)
@@ -62,7 +62,7 @@ Pokud chcete přidat novou routu:
 1. Vytvořte soubor `src/routes/nova-stranka.tsx`
 2. Upravte `scripts/prerender.mjs` – přidejte routu do pole:
    ```javascript
-   const routes = ['/', '/geodetika', '/nova-stranka'];
+   const routes = ['/', '/geodezie', '/nova-stranka'];
    ```
 3. Spusťte `npm run build:static`
 

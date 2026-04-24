@@ -28,7 +28,7 @@ export function Footer() {
                 <Link to="/">Dronové služby</Link>
               </li>
               <li>
-                <Link to="/geodetika">Geodetické služby</Link>
+                <Link to="/geodezie">Geodetické služby</Link>
               </li>
             </ul>
           </div>

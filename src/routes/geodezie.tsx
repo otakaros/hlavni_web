@@ -4,7 +4,7 @@ import { InquiryForm } from "@/components/geo/InquiryForm";
 import { useRevealObserver } from "@/components/geo/Reveal";
 import { useState } from "react";
 
-export const Route = createFileRoute("/geodetika")({
+export const Route = createFileRoute("/geodezie")({
   head: () => ({
     meta: [
       {
@@ -39,7 +39,7 @@ export const Route = createFileRoute("/geodetika")({
       },
     ],
   }),
-  component: Geodetika,
+  component: Geodezie,
 });
 
 const introCards = [
@@ -232,7 +232,7 @@ const geoPriceData: Record<
   },
 };
 
-function Geodetika() {
+function Geodezie() {
   const tabs: GeoTab[] = ["gp", "vytyceni-hranic", "podklad", "vytyceni-stavby", "dtm"];
   const [tab, setTab] = useState<GeoTab>("gp");
   useRevealObserver(tab);
