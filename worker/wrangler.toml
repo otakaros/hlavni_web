@@ -1,0 +1,16 @@
+name = "geodrona-inquiry"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# CORS — v kódu je už nastaveno přes ALLOWED_ORIGINS.
+# Pokud nasadíte web na vlastní doménu (např. geodrona.cz),
+# přidejte ji do ALLOWED_ORIGINS níže.
+
+[vars]
+ALLOWED_ORIGINS = "https://geodrona.cz,https://www.geodrona.cz,https://github.com/otakaros/hlavni_web"
+TARGET_EMAIL = "zakazky.geodetak@gmail.com"
+FROM_EMAIL = "GeoDrona <noreply@geodrona.cz>"
+
+# RESEND_API_KEY se nastavuje jako secret (NIKDY ne do tohoto souboru):
+#   wrangler secret put RESEND_API_KEY

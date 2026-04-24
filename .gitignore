@@ -1,0 +1,55 @@
+# =========================
+# LOGS
+# =========================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# =========================
+# DEPENDENCIES
+# =========================
+node_modules/
+worker/node_modules/
+
+# =========================
+# BUILDS
+# =========================
+dist/
+dist-ssr/
+.output/
+.vinxi/
+.nitro/
+
+# TanStack / framework cache
+.tanstack/
+
+# =========================
+# ENV FILES (KRITICKÉ)
+# =========================
+.env
+.env.*
+.dev.vars
+
+# =========================
+# CLOUDFLARE / WRANGLER
+# =========================
+.wrangler/
+
+# =========================
+# EDITOR / OS
+# =========================
+.vscode/
+!.vscode/extensions.json
+
+.idea/
+.DS_Store
+
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
