@@ -233,9 +233,9 @@ const geoPriceData: Record<
 };
 
 function Geodetika() {
-  useRevealObserver();
   const tabs: GeoTab[] = ["gp", "vytyceni-hranic", "podklad", "vytyceni-stavby", "dtm"];
   const [tab, setTab] = useState<GeoTab>("gp");
+  useRevealObserver(tab);
   const current = geoPriceData[tab];
 
   return (

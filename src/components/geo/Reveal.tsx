@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export function useRevealObserver() {
+export function useRevealObserver(dependency?: unknown) {
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
     if (!("IntersectionObserver" in window)) {
@@ -20,5 +20,5 @@ export function useRevealObserver() {
     );
     els.forEach((el) => obs.observe(el));
     return () => obs.disconnect();
-  }, []);
+  }, [dependency]);
 }

@@ -191,8 +191,8 @@ const faqItems = [
 ];
 
 function Index() {
-  useRevealObserver();
   const [tab, setTab] = useState<PriceTab>("termovize");
+  useRevealObserver(tab);
   const tabs: PriceTab[] = ["termovize", "fve", "inspekce", "3d", "objem", "media"];
 
   return (
