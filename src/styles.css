@@ -506,7 +506,6 @@ body.geo-app {
 .hero-h1 .w3 {
   color: rgba(212,228,200,0.55); font-size: 0.34em; letter-spacing: 0.18em;
   display: block; margin-top: 8px; font-weight: normal;
-  margin-top: -15px;
 }
 .hero-sub {
   font-size: 1.18rem; color: rgba(230,245,220,0.85);
@@ -759,6 +758,8 @@ body.geo-app {
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal.open { opacity: 1; transform: translateY(0); }
+/* Persist visibility via data attribute — survives React re-renders and className manipulation */
+.reveal[data-revealed="true"] { opacity: 1; transform: translateY(0); }
 .d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
 
 /* Tags */
