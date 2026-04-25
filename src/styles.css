@@ -505,7 +505,7 @@ body.geo-app {
 }
 .hero-h1 .w3 {
   color: rgba(212,228,200,0.55); font-size: 0.34em; letter-spacing: 0.18em;
-  display: block; margin-top: 8px; font-weight: normal;
+  display: block; font-weight: normal;
 }
 .hero-sub {
   font-size: 1.18rem; color: rgba(230,245,220,0.85);
