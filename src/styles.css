@@ -755,31 +755,11 @@ body.geo-app {
 .scroll-top:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 22px 48px -10px rgba(57,255,20,0.7); }
 .scroll-top svg { width: 22px; height: 22px; }
 
-/* Reveal - verze pro opakované zobrazení */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  will-change: opacity, transform;
-}
-
-/* Konečný stav animace */
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Zachováváme pro případ, že někde .open používáš */
-.reveal.open {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Zpoždění */
-.d1 { transition-delay: 0.08s; }
-.d2 { transition-delay: 0.16s; }
-.d3 { transition-delay: 0.24s; }
-.d4 { transition-delay: 0.32s; }
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal.open { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; } .d4 { transition-delay: 0.32s; }
 
 /* Tags */
 .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
