@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 export function useRevealObserver() {
   useEffect(() => {
-    // Pokud prohlížeč nepodporuje IntersectionObserver
     if (!("IntersectionObserver" in window)) {
       document.querySelectorAll<HTMLElement>(".reveal").forEach((el) => {
         el.classList.add("visible");
@@ -14,8 +13,14 @@ export function useRevealObserver() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);   // jednou a dost
+            const el = entry.target as HTMLElement;
+
+            // Důležitý trik: reset + force reflow → animace se spustí znovu
+            el.classList.remove("visible");
+            void el.offsetWidth;                    // force reflow
+
+            el.classList.add("visible");
+            observer.unobserve(el);
           }
         });
       },
@@ -25,17 +30,12 @@ export function useRevealObserver() {
       }
     );
 
-    // Najdeme všechny .reveal prvky a začneme je pozorovat (jen ty bez visible)
     const reveals = document.querySelectorAll<HTMLElement>(".reveal");
     reveals.forEach((el) => {
-      if (!el.classList.contains("visible")) {
-        observer.observe(el);
-      }
+      // Pozorujeme všechny prvky (i ty už s .visible), protože chceme reset
+      observer.observe(el);
     });
 
-    // Cleanup
-    return () => {
-      observer.disconnect();
-    };
-  }, []); // ← důležité: prázdné pole
+    return () => observer.disconnect();
+  }, []);
 }
