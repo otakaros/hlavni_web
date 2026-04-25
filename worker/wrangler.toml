@@ -3,6 +3,8 @@ main = "src/index.ts"
 compatibility_date = "2024-11-01"
 compatibility_flags = ["nodejs_compat"]
 
+route = "*/api/public/inquiry"
+
 # CORS — v kódu je už nastaveno přes ALLOWED_ORIGINS.
 # Pokud nasadíte web na vlastní doménu (např. geodrona.cz),
 # přidejte ji do ALLOWED_ORIGINS níže.

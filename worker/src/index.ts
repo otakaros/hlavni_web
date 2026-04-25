@@ -167,7 +167,9 @@ export default {
     }
 
     const url = new URL(request.url);
-    if (url.pathname !== "/inquiry") {
+    // Akceptujeme obě cesty: /inquiry a /api/public/inquiry
+    const pathname = url.pathname;
+    if (pathname !== "/inquiry" && pathname !== "/api/public/inquiry") {
       return new Response("Not found", { status: 404, headers: cors });
     }
 
