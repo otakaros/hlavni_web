@@ -46,15 +46,30 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: appCss,
       },
-      // Favicon — multiformat pro maximum kompatibilitu se všemi vyhledávači a zařízeními
+      // ===== FAVICON — MULTIFORMAT PRO MAXIMUM DOSAH V SEARCH ENGINES =====
+      // Standard favicon — SVG pro moderní prohlížeče (nejmenší soubor, scalable)
       { rel: "icon", type: "image/svg+xml", href: "/assets/favicon.svg" },
+      // PNG fallback — vyhledávače (Google, Bing, Seznam, DuckDuckGo), sociální sítě
+      { rel: "icon", type: "image/png", sizes: "512x512", href: "/assets/favicon-512.png" },
       { rel: "icon", type: "image/png", sizes: "192x192", href: "/assets/favicon-192.png" },
+      { rel: "icon", type: "image/png", sizes: "96x96", href: "/assets/favicon-96.png" },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/assets/favicon-32.png" },
       { rel: "icon", type: "image/png", sizes: "16x16", href: "/assets/favicon-16.png" },
+      // Legacy .ico — Internet Explorer, starší prohlížeče, Seznam.cz
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "apple-touch-icon", sizes: "180x180", href: "/assets/apple-touch-icon.png" },
+      // Apple — iOS iPhone/iPad home screen (musí být PNG)
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/assets/apple-touch-icon-180.png" },
+      { rel: "apple-touch-icon", sizes: "152x152", href: "/assets/apple-touch-icon-152.png" },
+      { rel: "apple-touch-icon", sizes: "144x144", href: "/assets/apple-touch-icon-144.png" },
+      { rel: "apple-touch-icon", sizes: "120x120", href: "/assets/apple-touch-icon-120.png" },
+      { rel: "mask-icon", href: "/assets/favicon.svg", color: "#39ff14" },
+      // Android — PWA manifest + offline apps
       { rel: "manifest", href: "/assets/site.webmanifest" },
+      // Microsoft — Windows tile + config
       { rel: "msapplication-config", content: "/assets/browserconfig.xml" },
+      { name: "msapplication-TileColor", content: "#0d2818" },
+      { name: "msapplication-TileImage", content: "/assets/favicon-144.png" },
+      { name: "msapplication-navbutton-color", content: "#39ff14" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap",

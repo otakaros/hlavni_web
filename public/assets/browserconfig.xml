@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Microsoft Windows — tile konfiguraceDoporučuje se pro Windows 10/11 Start menu -->
 <browserconfig>
   <msapplication>
-    <!-- Windows Tiles — barevná tlačítka Start menu Windows -->
+    <!-- Tile ikony v různých velikostech -->
     <tile>
+      <!-- Standardní square tile (medium) -->
       <square70x70logo src="/assets/favicon-70.png" />
+      <!-- Medium tile — 150×150 -->
       <square150x150logo src="/assets/favicon-150.png" />
+      <!-- Large tile — 310×310 -->
       <square310x310logo src="/assets/favicon-310.png" />
+      <!-- Wide tile — 310×150 (pro Windows 8+) -->
       <wide310x150logo src="/assets/favicon-310x150.png" />
-      <!-- Barva pozadí tile (zelená GeoDrony branding) -->
+      <!-- Barva pozadí tile — GeoDrona zelená -->
       <TileColor>#0d2818</TileColor>
     </tile>
-    <!-- Nastavení pro Microsoft Edge a IE -->
-    <notification>
-      <polling-uri src="https://geodrona.cz/api/poll" />
-      <polling-uri2 src="https://geodrona.cz/api/poll" period="60" />
-      <polling-uri3 src="https://geodrona.cz/api/poll" period="360" />
-    </notification>
+    
+    <!-- Sekce pro notifikace (nepovinné) -->
+    <!-- Pokud bys chtěl push notifikace přes Windows Notifications -->
+    <!-- <notification>
+      <polling-uri src="https://geodrona.cz/notifications/poll" />
+      <polling-uri2 src="https://geodrona.cz/notifications/poll" period="60" />
+      <frequency-seconds>60</frequency-seconds>
+    </notification> -->
   </msapplication>
 </browserconfig>

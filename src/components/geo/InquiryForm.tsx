@@ -82,9 +82,10 @@ export function InquiryForm({ variant }: { variant: FormVariant }) {
 
     setSubmitting(true);
     try {
+      // Worker endpoint — produkce: Cloudflare Worker, dev: fallback
       const endpoint =
         (import.meta.env.VITE_INQUIRY_ENDPOINT as string | undefined) ||
-        "/api/public/inquiry";
+        "https://geodrona-inquiry.geodrona-inquiry.workers.dev/inquiry";
       const res = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
