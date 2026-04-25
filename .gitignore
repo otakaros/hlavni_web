@@ -40,6 +40,16 @@ dist-ssr/
 .wrangler/
 
 # =========================
+# FAVICON (VYGENEROVANÉ)
+# =========================
+# PNG verze faviconu se generují z SVG pomocí ImageMagick
+# nebo online nástroje. Nejsou source, ale vygenerované soubory.
+# Přidat do repozitáře až po vygenerování!
+public/assets/favicon-*.png
+public/assets/apple-touch-icon.png
+public/favicon.ico
+
+# =========================
 # EDITOR / OS
 # =========================
 .vscode/

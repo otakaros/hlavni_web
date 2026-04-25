@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <!-- Windows Tiles — barevná tlačítka Start menu Windows -->
+    <tile>
+      <square70x70logo src="/assets/favicon-70.png" />
+      <square150x150logo src="/assets/favicon-150.png" />
+      <square310x310logo src="/assets/favicon-310.png" />
+      <wide310x150logo src="/assets/favicon-310x150.png" />
+      <!-- Barva pozadí tile (zelená GeoDrony branding) -->
+      <TileColor>#0d2818</TileColor>
+    </tile>
+    <!-- Nastavení pro Microsoft Edge a IE -->
+    <notification>
+      <polling-uri src="https://geodrona.cz/api/poll" />
+      <polling-uri2 src="https://geodrona.cz/api/poll" period="60" />
+      <polling-uri3 src="https://geodrona.cz/api/poll" period="360" />
+    </notification>
+  </msapplication>
+</browserconfig>

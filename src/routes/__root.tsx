@@ -46,8 +46,15 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: appCss,
       },
+      // Favicon — multiformat pro maximum kompatibilitu se všemi vyhledávači a zařízeními
       { rel: "icon", type: "image/svg+xml", href: "/assets/favicon.svg" },
-      { rel: "apple-touch-icon", href: "/assets/favicon.svg" },
+      { rel: "icon", type: "image/png", sizes: "192x192", href: "/assets/favicon-192.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/assets/favicon-32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/assets/favicon-16.png" },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/assets/apple-touch-icon.png" },
+      { rel: "manifest", href: "/assets/site.webmanifest" },
+      { rel: "msapplication-config", content: "/assets/browserconfig.xml" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap",

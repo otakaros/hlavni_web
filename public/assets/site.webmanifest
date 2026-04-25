@@ -1,0 +1,76 @@
+{
+  "name": "GeoDrona – Geodetické služby a dronové služby",
+  "short_name": "GeoDrona",
+  "description": "Profesionální geodetické a dronové služby: pasportizace budov, 3D skenování BIM, DTM vklady, termovize, fotogrammetrie. Ostrava, Moravskoslezský kraj.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07090d",
+  "theme_color": "#39ff14",
+  "scope": "/",
+  "lang": "cs",
+  "dir": "ltr",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "professional-services"],
+  "screenshots": [
+    {
+      "src": "/assets/hero-geodet.jpg",
+      "sizes": "540x720",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/assets/hero-drone.jpg",
+      "sizes": "540x720",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Poptávka – Geodetické služby",
+      "short_name": "Geodetika",
+      "description": "Zaslat poptávku na geodetické služby",
+      "url": "/geodezie?focus=form",
+      "icons": [
+        {
+          "src": "/assets/favicon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Poptávka – Dronové služby",
+      "short_name": "Drony",
+      "description": "Zaslat poptávku na dronové služby",
+      "url": "/?focus=form",
+      "icons": [
+        {
+          "src": "/assets/favicon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
